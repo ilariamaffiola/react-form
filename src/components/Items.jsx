@@ -13,25 +13,35 @@ const blogItems = [
   "Weekend fuori porta: 5 mete perfette per rigenerarsi"
 ];
 const Items = () => {
-const [newItem, setNewItem] = useState("");
-const [items, setItems] = useState(blogItems);
+    
 
-  return (
-    <div>
-      <div className="container">
-        <div className="list-group">
-            <ul>
-            {items.map((item, index) => (
-                <li key={index} className='list-group-item'>{item}</li>
-            ))}
-            </ul>
-            <form>
-            
-            </form>
+    return (
+        <div>
+        <div className="container">
+            <div className="list-group">
+                <ul>
+                    {items.map((item, index) => (
+                        <li key={index} className='list-group-item'>{item}</li>
+                    ))} 
+                </ul>
+                <form onSubmit={addItem}>
+                    <div className="input-group mb-3">
+                        <input
+                            value={newItem}
+                            onChange={(e) =>{
+                                setNewItem(e.target.value);
+                            }} //onChange aggiorna newTask in tempo reale.
+                            type="text"
+                            className='form-control'
+                            placeholder='Aggiungi un nuovo titolo'
+                        />
+                        <button className='btn btn-primary'>Aggiungi</button>
+                    </div>
+                </form>
+            </div>
         </div>
-      </div>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default Items
