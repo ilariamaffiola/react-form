@@ -13,7 +13,9 @@ const blogItems = [
   "Weekend fuori porta: 5 mete perfette per rigenerarsi"
 ];
 const Items = () => {
-    
+    const [newItem, setNewItem] = useState("");
+        const [items, setItems] = useState(blogItems);
+          
 
     return (
         <div>
