@@ -10,3 +10,17 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+
+Ciao Ragazzi,
+esercizio di oggi: React Blog Form
+repo: react-form
+Esercizio
+Milestone 1
+Creare una pagina che visualizzi una lista di articoli (createla voi, va bene un semplice array di stringhe), mostrandone solo il titolo.
+Milestone 2
+Aggiungiamo in pagina un semplice form con un campo input in cui inserire il titolo di un nuovo articolo del blog. Al submit del form, mostrare la lista degli articoli aggiornati.
+Numero minimo di push: 7
+BONUS
+Aggiungere la possibilità di cancellare ciascun articolo utilizzando un'icona.
+Buon lavoro! 
