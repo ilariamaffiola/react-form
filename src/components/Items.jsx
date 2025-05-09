@@ -22,13 +22,29 @@ const Items = () => {
             setItems([...items, item]);
             setNewItem("");
         }
+    const handleRemoveItem = (index) => {
+        const updatedItems = items.filter((item, i) => {
+            return i !== index;
+        });
+        setItems(updatedItems);
+    }
     return (
         <div>
         <div className="container">
             <div className="list-group">
                 <ul>
                     {items.map((item, index) => (
-                        <li key={index} className='list-group-item'>{item}</li>
+                        <li 
+                            key={index} className='list-group-item list-group-item d-flex justify-content-between align-items-center'>{item}
+                            <button
+                                className='btn btn-danger btn-sm '
+                                onClick={() =>{
+                                    handleRemoveItem(index);
+                                }}
+                                >
+                                <i className="fa-solid fa-trash"></i>
+                            </button>
+                        </li>
                     ))} 
                 </ul>
                 <form onSubmit={addItem}>
