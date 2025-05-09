@@ -29,10 +29,10 @@ const Items = () => {
         setItems(updatedItems);
     }
     return (
-        <div>
+        <div className='py-3'>
         <div className="container">
             <div className="list-group">
-                <ul>
+                <ul className="p-0 m-0">
                     {items.map((item, index) => (
                         <li 
                             key={index} className='list-group-item list-group-item d-flex justify-content-between align-items-center'>{item}
@@ -47,7 +47,7 @@ const Items = () => {
                         </li>
                     ))} 
                 </ul>
-                <form onSubmit={addItem}>
+                <form className="mt-3" onSubmit={addItem}>
                     <div className="input-group mb-3">
                         <input
                             value={newItem}
