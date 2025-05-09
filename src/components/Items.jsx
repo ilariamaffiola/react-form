@@ -14,15 +14,14 @@ const blogItems = [
 ];
 const Items = () => {
     const [newItem, setNewItem] = useState("");
-        const [items, setItems] = useState(blogItems);
+    const [items, setItems] = useState(blogItems);
     const addItem = (e) => {
             e.preventDefault();
             console.log(`aggiunto ${newItem}`);
             const item = newItem.trim();
             setItems([...items, item]);
             setNewItem("");
-        }        
-
+        }
     return (
         <div>
         <div className="container">
